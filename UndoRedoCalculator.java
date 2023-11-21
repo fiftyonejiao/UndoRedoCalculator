@@ -1,10 +1,3 @@
-  /**
-     * 一个计算器类（Calculator）
-     * 可以实现两个数的加、减、乘、除运算
-     * 并可以进行undo和redo操作 (undo和redo 就是撤销和重做的操作)
-     * 可在实现功能的基础上发挥最优设计
-     */
-
     class RunMain {
         public static UndoRedoCalculator calculator = new UndoRedoCalculator();
 
@@ -21,9 +14,9 @@
     }
 
 public class UndoRedoCalculator {
-        public BasicCalculator basicCalculator = new BasicCalculator();
-        public List<Command> commands = new ArrayList<Command>();
-        public int currentIndex = 0;
+        private BasicCalculator basicCalculator = new BasicCalculator();
+        private List<Command> commands = new ArrayList<Command>();
+        private int currentIndex = 0;
 
         //计算
         public void calc(char curOperator, int num) {
